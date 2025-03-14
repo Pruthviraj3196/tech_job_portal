@@ -12,6 +12,7 @@ export default defineConfig({
       '/api': {
         target: 'https://tech-job-portal.onrender.com', // Use the environment variable
         changeOrigin: true,
+        secure:false
       },
     },
   },
