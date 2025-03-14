@@ -47,7 +47,7 @@ const ViewJobsPage = () => {
       return;
     }
     try {
-      await axios.delete(`http://localhost:4000/api/v1/deletejob/${jobId}`, {
+      await axios.delete(`/api/v1/deletejob/${jobId}`, {
         headers: { Authorization: `${token}` },
       });
       setJobs(jobs.filter((job) => job._id !== jobId));
