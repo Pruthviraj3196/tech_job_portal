@@ -37,7 +37,7 @@ const CreateJobPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/createjob",
+        "/api/v1/createjob",
         formData,
         {
           headers: { Authorization: `${token}` },

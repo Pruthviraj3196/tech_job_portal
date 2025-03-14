@@ -15,7 +15,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:4000/api/v1/login", user);
+      const res = await axios.post("/api/v1/login", user);
       if (res.data.token) {
         localStorage.setItem("token", res.data.token);
         navigate("/");

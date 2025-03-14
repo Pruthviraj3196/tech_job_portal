@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import CreateJobPage from "./components/pages/CreateJobPage";
 import { useEffect, useState } from "react";
 
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 

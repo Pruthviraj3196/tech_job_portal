@@ -29,7 +29,8 @@ const ViewJobsPage = () => {
       return;
     }
     try {
-      const response = await axios.get("http://localhost:4000/api/v1/viewjob", {
+
+        const response = await axios.get(`/api/v1/viewjob`,{
         headers: { Authorization: `${token}` },
       });
       setJobs(response.data.getAllJobs);

@@ -38,7 +38,7 @@ const EditJobPage = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:4000/api/v1/viewjob/`,
+        `/api/v1/viewjob/`,
         {
           headers: { Authorization: ` ${token}` },
         }
@@ -72,7 +72,7 @@ const EditJobPage = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:4000/api/v1/editjob/${jobId}`,
+        `/api/v1/editjob/${jobId}`,
         job,
         {
           headers: { Authorization: `${token}` },

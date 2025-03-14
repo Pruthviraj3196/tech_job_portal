@@ -15,7 +15,7 @@ const SignUpPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:4000/api/v1/signup", user);
+      const res = await axios.post("/api/v1/signup", user);
       setMessage(res.data.message);
       setTimeout(() => navigate("/login"), 1500);
     } catch (error) {
