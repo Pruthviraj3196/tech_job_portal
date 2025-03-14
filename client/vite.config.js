@@ -6,6 +6,7 @@ import react from '@vitejs/plugin-react';
     server: {
       host: '0.0.0.0',
       port: 4562,
+      allowedHosts: ['tech-job-portal-1.onrender.com'],
       proxy: {
         '/api': {
           target: "https://tech-job-portal.onrender.com",
@@ -13,7 +14,7 @@ import react from '@vitejs/plugin-react';
           secure: false,
         },
       },
-        allowedHosts: ['tech-job-portal-1.onrender.com'],
+        
     },
     plugins: [react()],
 });
