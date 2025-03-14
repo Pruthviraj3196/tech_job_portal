@@ -5,13 +5,12 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   server: {
-    port:10000, host: '0.0.0.0',strictPort: true, allowedHosts: ['https://tech-job-portal-1.onrender.com/'], 
+    host: '0.0.0.0', 
+    allowedHosts: ['*'], 
     proxy:{
       '/api': {
-        // target: import.meta.env.REACT_APP_BACKENDURI, // Use the environment variable
         target: 'https://tech-job-portal.onrender.com', // Use the environment variable
-        changeOrigin: true,
-        secure:false
+        changeOrigin: false,
       },
     },
   },
