@@ -11,7 +11,7 @@ export default defineConfig({
     proxy:{
       '/api': {
         target: 'https://tech-job-portal.onrender.com', // Use the environment variable
-        changeOrigin: false,
+        changeOrigin: true,
       },
     },
   },
